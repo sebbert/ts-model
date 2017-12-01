@@ -1,0 +1,25 @@
+<App Model="ts-build/AppModel">
+    <Rectangle ux:Class="DaBigButton" Width="50" BoxSizing="FillAspect" Margin="10" Color="#000" CornerRadius="3">
+        <string ux:Property="Label" />
+        <Text Value="{ReadProperty Label}" Margin="10" Color="#fff" FontSize="30" Alignment="Center" TextAlignment="Center" Offset="0,-4" />
+    </Rectangle>
+
+    <DockPanel Color="#eee">
+        <StackPanel ItemSpacing="4">
+            <Each Items="{counters}">
+                <Panel Color="#fff">
+                    <Grid Columns="1*,auto,auto" Margin="20">
+                        <Text Value="{value}" FontSize="30" Alignment="CenterLeft" />
+                        <DaBigButton Label="-" Clicked="{decrement}" />
+                        <DaBigButton Label="+" Clicked="{increment}" />
+                    </Grid>
+                    <Rectangle Alignment="Bottom" Height="1" Color="#0001" />
+                </Panel>
+            </Each>
+        </StackPanel>
+
+        <Panel Dock="Bottom">
+            <DaBigButton Alignment="Center" Label="+" Clicked="{addCounter}" />
+        </Panel>
+    </DockPanel>
+</App>
