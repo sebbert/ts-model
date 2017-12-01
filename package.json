@@ -2,8 +2,7 @@
   "scripts": {
     "watch": "tsc -w"
   },
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^2.6.2"
   }
 }
